@@ -33,5 +33,5 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          unityVersion: '2022.2.0f1'
+          unityVersion: '2023.2.1f1'
           targetPlatform: 'Android'
