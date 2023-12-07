@@ -25,6 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      # Cache library for faster builds
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: 
+          key: Library-Github-Actions-Pipeline-Android
+          restore-keys: |
+            Library-Github-Actions-Pipeline-Library
+
+      # Run tests. Set tests to run parallel to build, but before upload
+      
       # Build application
       - name: Build
         uses: game-ci/unity-builder@v4
