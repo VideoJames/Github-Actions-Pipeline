@@ -37,7 +37,7 @@ jobs:
       # Run tests. Set tests to run parallel to build, but before upload
       
       # Build application
-      - name: Build
+      - name: unity-android-build
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -52,4 +52,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: unity-android-build
-          path: build/output/
+          # This is unity-builder's default build location
+          path: build
